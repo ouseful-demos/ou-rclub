@@ -9,6 +9,8 @@ You can run the examples via MyBinder:
  - Launch in Jupyter Notebooks: [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/ouseful-demos/ou-rclub/master)
  - Launch in RStudio: [![Binder](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/ouseful-demos/ou-rclub/master?urlpath=rstudio)
 
+You can also access RStudio from the *New* menu on the notebook server homepage.
+
 Example files are in the `tutorial` directory.
 
 
