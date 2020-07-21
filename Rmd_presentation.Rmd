@@ -1,0 +1,82 @@
+---
+title: "RClub Presentation"
+output:
+  revealjs::revealjs_presentation:
+    transition: none
+    theme: simple
+    highlight: pygments
+    mathjax: local
+    self_contained: false
+    center: false
+---
+<!-- Hack via Githib issue to left align slide body content: 
+    https://github.com/hakimel/reveal.js/issues/1897#issuecomment-301130888
+-->
+<style type="text/css">
+  .reveal p {
+    text-align: left;
+  }
+  .reveal ul {
+    display: block;
+  }
+  .reveal ol {
+    display: block;
+  }
+</style>
+
+*Being an example of some of the things you can do after `install.packages("revealjs")`...*
+
+`Tony.Hirst@open.ac.uk`
+
+# Just Another Slide
+
+We can use markdown:
+
+- lists
+  - sublists
+- *emphasis*
+
+etc.
+
+# Rich Text
+
+We can used styled code:
+
+```R
+fahrenheit_to_celsius <- function(temp_F) {
+  temp_C <- (temp_F - 32) * 5 / 9
+  return(temp_C)
+}
+```
+
+## And subslides...
+And LaTeX equations: 
+
+\begin{align*}
+  f(x) &= x^2\\
+  g(x) &= \frac{1}{x}\\
+  F(x) &= \int^a_b \frac{1}{3}x^3
+\end{align*}
+
+# Code outputs
+
+We can embed code output:
+
+```{r}
+a<-1
+a+1
+```
+
+# Widget Output
+
+We can hide the code as per normal and just embed output:
+
+```{r, echo=FALSE}
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m
+
+```

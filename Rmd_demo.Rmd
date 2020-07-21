@@ -1,0 +1,119 @@
+---
+title: "RClub Demo"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document, which you are probably familiar with.
+
+Markdown is a simple formatting syntax for authoring documents that can be converted to HTML, PDF, and MS Word formats, among others. 
+
+Rmd allows you to combine styled text, code and code outputs.
+
+In RStudio, the **Knit** button will work the magic for you...
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+When generating output documents, you can hide the code, warnings, messages, etc.
+
+Using the `knitr::kable` package prettifies tables etc.
+
+```{r echo=FALSE}
+library(knitr)
+kable(summary(cars))
+```
+
+Running code chunk will execute the code an render any output returned from the final code line in the chunk.
+
+Outputs can embed plots, for example:
+
+```{r pressure, echo=FALSE, message=FALSE}
+library(ggplot2)
+
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+
+g <- ggplot(data = d, aes(x = carat, y = price)) +
+  geom_smooth(aes(colour = cut, fill = cut)) + facet_wrap(~ cut)
+
+g
+```
+
+The chart object can also be converted directly into an interactive chart using the 
+
+```{r message=FALSE}
+#install.packages("plotly") 
+library(plotly)
+ggplotly(g)
+```
+
+We can also create and embed other rich HTML objects:
+
+```{r echo=FALSE, results='hide'}
+
+library(leaflet)
+
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
+m
+```
+
+## Interactive Time Series Charts
+
+We can explore time series data in a widget, although I don't think we can get access to the filtered data directly from the widget?
+
+```{r results='hide', message=FALSE, warning=FALSE, include=FALSE}
+install.packages("dygraphs")
+```
+
+```{r}
+library(dygraphs)
+
+lungDeaths <- cbind(mdeaths, fdeaths)
+
+dygraph(lungDeaths) %>%
+  dySeries("mdeaths", label = "Male") %>%
+  dySeries("fdeaths", label = "Female") %>%
+  dyOptions(stackedGraph = TRUE) %>%
+  dyRangeSelector(height = 20)
+```
+
+## Running Python Code
+
+If a Python environment is available, we can run Python code via the `reticulate` package and get access to the content of Python objects.
+
+```{r}
+library(reticulate)
+
+py_run_string("x = 10")
+py$x
+```
+
+Or multi-line code:
+
+```{r}
+pycode = "
+from datetime import datetime
+
+now = datetime.now()
+"
+py_run_string(pycode)
+py$now
+```
+
+
+
+
+
+
