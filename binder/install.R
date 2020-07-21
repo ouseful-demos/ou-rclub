@@ -4,6 +4,8 @@ install.packages("reticulate") # python support in RMarkdown
 install.packages("ggplot2") # for plotting
 install.packages(c("rmarkdown", "caTools", "bitops")) # for knitting
 
+install.packages("revealjs") #presentation
+
 # Widget demos
 install.packages("leaflet") # for maps
 install.packages("dygraphs") # for timeseries
