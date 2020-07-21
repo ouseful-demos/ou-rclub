@@ -4,6 +4,7 @@ dependencies:
   - pandas
   - pip
   - pip:
+    - RISE
     - nbzip
     - jupytext
     - rpy2
@@ -13,3 +14,6 @@ dependencies:
     - jupyter_contrib_nbextensions
     - git+https://github.com/innovationOUtside/ipython_magic_blockdiag.git
     - git+https://github.com/innovationOUtside/nb_cell_execution_status.git
+    - git+https://github.com/innovationOUtside/nb_extension_tagstyler.git
+    - git+https://github.com/innovationOUtside/nb_extension_empinken.git
+    - git+https://github.com/innovationOUtside/nb_cell_dialog.git
