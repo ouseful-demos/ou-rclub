@@ -11,7 +11,7 @@ You can run the examples via MyBinder:
 
 You can also access RStudio from the *New* menu on the notebook server homepage.
 
-Example files are in the `tutorial` directory.
+Example files are in the [`tutorial`](./tutorial) directory.
 
 
 If you have Docker installed on your own computer [[install Docker](https://docs.docker.com/engine/install/)], along with a Python environment with the `pip` package manager installed, you can build and run your own container locally by opening a terminal / command prompt and entering:
