@@ -3,7 +3,7 @@ dependencies:
   - numpy
   - pandas
   - pip
-  -pip:
+  - pip:
     - nbzip
     - jupytext
     - rpy2
