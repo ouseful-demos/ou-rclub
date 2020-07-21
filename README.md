@@ -22,3 +22,18 @@ jupyter-repo2docker https://github.com/ouseful-demos/ou-rclub
 ```
 
 *I also reminded myself of a range of topic based notebook examples I'd developed previously on the soon to be shut down `notebooks.azure.com` service. I've moved the notebooks to [`ouseful-demos/getting-started-with-notebooks`](https://github.com/ouseful-demos/getting-started-with-notebooks) and will try to pull a binder config that allows them to run as an when I get a chance.*
+
+## JupyterHub Server Used for the Tutorial
+
+The multiuser JupyterHub server used for the tutorial was a TLJH ([The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)) server running the [`plasmabio/tljh-repo2docker`](https://github.com/plasmabio/tljh-repo2docker) extension that built the offered environment from this repository.
+
+The JupyterHub server was running on a [Digital Ocean](https://www.digitalocean.com/) basic server (8 GB Memory / 160 GB Disk / 5TB data transfer) in the `LON1` London region under Ubuntu 18.04.3 (LTS) x64`. Billing was at the level of `$40 /mo` (`$0.060 /hour`). The server was created and populated the day before the workshop with an intention of making it available for the workshop day and the day after.
+
+Authentication on the TLJH server was switched to the first use authenticator by logging in to the physical server using ssh and issuing the commands:
+
+```
+# Full path if required: /opt/tljh/hub/bin/tljh-config 
+sudo tljh-config set auth.type firstuseauthenticator.FirstUseAuthenticator
+sudo tljh-config set auth.FirstUseAuthenticator.create_users True
+sudo tljh-config reload
+```
