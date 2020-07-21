@@ -17,8 +17,6 @@ install.packages("revealjs") #presentation
 install.packages("leaflet") # for maps
 install.packages("dygraphs") # for timeseries
 
-library(devtools)
-install_github("ajrgodfrey/BrailleR")
 
 ### install bioconductor packages
 # install.packages("BiocManager")

@@ -1,6 +1,12 @@
 matplotlib
 numpy
 pandas
+beautifulsoup4
+lxml
+openpyxl
+pytables
+tabulate
+pyreadr
 RISE
 nbzip
 jupytext
@@ -8,6 +14,7 @@ rpy2
 statsmodels
 plotly
 seaborn
+sympy
 jupyter_contrib_nbextensions
 git+https://github.com/innovationOUtside/ipython_magic_blockdiag.git
 git+https://github.com/innovationOUtside/nb_cell_execution_status.git
