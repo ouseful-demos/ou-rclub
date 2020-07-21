@@ -4,6 +4,7 @@ dependencies:
   - pandas
   - pip
   -pip:
+    - nbzip
     - jupytext
     - rpy2
     - statsmodels
