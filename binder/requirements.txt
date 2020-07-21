@@ -1,5 +1,6 @@
 matplotlib
 numpy
+nbgitpuller
 pandas
 beautifulsoup4
 lxml
