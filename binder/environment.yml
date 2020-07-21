@@ -2,11 +2,13 @@ dependencies:
   - matplotlib
   - numpy
   - pandas
-  - jupytext
-  - rpy2
-  - statsmodels
-  - plotly
-  - seaborn
-  - jupyter_contrib_nbextensions
-  - git+https://github.com/innovationOUtside/ipython_magic_blockdiag.git
-  - git+https://github.com/innovationOUtside/nb_cell_execution_status.git
+  - pip
+  -pip:
+    - jupytext
+    - rpy2
+    - statsmodels
+    - plotly
+    - seaborn
+    - jupyter_contrib_nbextensions
+    - git+https://github.com/innovationOUtside/ipython_magic_blockdiag.git
+    - git+https://github.com/innovationOUtside/nb_cell_execution_status.git
