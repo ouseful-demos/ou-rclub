@@ -23,7 +23,7 @@ jupyter-repo2docker https://github.com/ouseful-demos/ou-rclub
 
 *I also reminded myself of a range of topic based notebook examples I'd developed previously on the soon to be shut down `notebooks.azure.com` service. I've moved the notebooks to [`ouseful-demos/getting-started-with-notebooks`](https://github.com/ouseful-demos/getting-started-with-notebooks) and will try to pull a binder config that allows them to run as an when I get a chance.*
 
-## JupyterHub Server Used for the Tutorial
+## Multi-user JupyterHub Server Used for the Tutorial
 
 The multiuser JupyterHub server used for the tutorial was a TLJH ([The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)) server. The ennvironment use was built from this repository and managed thereafter using the [`plasmabio/tljh-repo2docker`](https://github.com/plasmabio/tljh-repo2docker) extension.
 
