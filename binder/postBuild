@@ -6,3 +6,8 @@
 # Remove output from Jupyter notebooks
 #jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace python_example_for_Jupyter.ipynb
 #jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace R_example_for_Jupyter.ipynb
+jupyter trust tutorial/Jupyter_py_and_R.ipynb
+jupyter trust tutorial/jupyter_r_notebook_demo.ipynb
+
+jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/Jupyter_py_and_R.ipynb
+jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/jupyter_r_notebook_demo.ipynb
