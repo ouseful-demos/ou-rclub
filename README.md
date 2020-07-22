@@ -41,14 +41,14 @@ sudo tljh-config reload
 
 ### TLJH Customisation
 
-I customised the TLJH environment in a couple of ways too.
+I customised the TLJH environment in a couple of ways too, adding a logo and changing the colour theme from Jupyter orange to an OU blue.
 
-To brand the TLJH landing page with a logo, in the server I created a dir path:
+To brand the TLJH landing page with a logo, in the server I created a directory path:
 
 ```
 mkdir -p /usr/local/share/jupyter/hub/static/images
 ```
-and `scp`d a log into it:
+and `scp`'d a logo into it:
 
 ```
 scp ./OU-logo-83x65.png root@IP.ADDRESS:/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png
