@@ -5,6 +5,7 @@ install.packages("remotes")
 install.packages("reticulate") # python support in RMarkdown
 install.packages("kableExtra")
 install.packages("hablar")
+install.packages("tidyverse")
 
 install.packages("ggplot2") # for plotting
 install.packages("plotly") # for interactive plotting
