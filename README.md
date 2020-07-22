@@ -37,3 +37,58 @@ sudo tljh-config set auth.type firstuseauthenticator.FirstUseAuthenticator
 sudo tljh-config set auth.FirstUseAuthenticator.create_users True
 sudo tljh-config reload
 ```
+
+
+### TLJH Customisation
+
+I customised the TLJH environment in a couple of ways too.
+
+To brand the TLJH landing page with a logo, in the server I created a dir path:
+
+```
+mkdir -p /usr/local/share/jupyter/hub/static/images
+```
+and `scp`d a log into it:
+
+```
+scp ./OU-logo-83x65.png root@IP.ADDRESS:/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png
+```
+
+Then back in the server:
+
+```
+locate jupyterhub_config.py
+
+#then with path discovered:
+nano /opt/tljh/hub/lib/python3.6/site-packages/tljh/jupyterhub_config.py
+```
+
+and added to the `jupyterhub_config.py` file:
+
+```
+c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png
+```
+
+Tweaks to login page:
+
+```
+locate login.html
+# And with the discovered path:
+nano /opt/tljh/hub/share/jupyterhub/templates/login.html
+```
+
+then I changed the login message.
+
+The colour theming is defined in `/opt/tljh/hub/share/jupyterhub/static/less/variables.less` as [`jupyter-orange`](https://github.com/jupyterhub/jupyterhub/search?q=jupyter-orange&unscoped_q=jupyter-orange) but in the deployment this literal value (`#F37524`) is baked in to `/opt/tljh/hub/share/jupyterhub/static/css/style.min.css`. So I recolured it to a `#316FB4` blue with a literal edit:
+
+```
+locate style.min.css
+# And with the discovered path:
+sed -i 's/F37524/316FB4/g' /opt/tljh/hub/share/jupyterhub/static/css/style.min.css
+```
+
+To restart the server with the new settings:
+
+```
+/opt/tljh/hub/bin/tljh-config reload
+```
