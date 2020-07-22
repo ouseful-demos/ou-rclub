@@ -79,7 +79,7 @@ nano /opt/tljh/hub/share/jupyterhub/templates/login.html
 
 then I changed the login message.
 
-The colour theming is defined in `/opt/tljh/hub/share/jupyterhub/static/less/variables.less` as [`jupyter-orange`](https://github.com/jupyterhub/jupyterhub/search?q=jupyter-orange&unscoped_q=jupyter-orange) but in the deployment this literal value (`#F37524`) is baked in to `/opt/tljh/hub/share/jupyterhub/static/css/style.min.css`. So I recolured it to a `#316FB4` blue with a literal edit:
+The colour theming is defined in `/opt/tljh/hub/share/jupyterhub/static/less/variables.less` as [`jupyter-orange`](https://github.com/jupyterhub/jupyterhub/search?q=jupyter-orange&unscoped_q=jupyter-orange) but in the deployment this literal value (`#F37524`) is baked in to `/opt/tljh/hub/share/jupyterhub/static/css/style.min.css`. So I recoloured it to a `#316FB4` blue with a literal edit:
 
 ```
 locate style.min.css
