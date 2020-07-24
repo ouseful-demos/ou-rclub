@@ -66,7 +66,7 @@ nano /opt/tljh/hub/lib/python3.6/site-packages/tljh/jupyterhub_config.py
 and added to the `jupyterhub_config.py` file:
 
 ```
-c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png
+c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png'
 ```
 
 Tweaks to login page:
