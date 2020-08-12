@@ -25,7 +25,7 @@ jupyter-repo2docker https://github.com/ouseful-demos/ou-rclub
 
 ## Multi-User JupyterHub Server Used for the Tutorial
 
-The multiuser JupyterHub server used for the tutorial was a TLJH ([The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)) server. The ennvironment use was built from this repository and managed thereafter using the [`plasmabio/tljh-repo2docker`](https://github.com/plasmabio/tljh-repo2docker) extension.
+The multiuser JupyterHub server used for the tutorial was a TLJH ([The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)) server. The environment used was built from this repository and managed thereafter using the [`plasmabio/tljh-repo2docker`](https://github.com/plasmabio/tljh-repo2docker) extension.
 
 The JupyterHub server was running on a [Digital Ocean](https://www.digitalocean.com/) basic server (8 GB Memory / 160 GB Disk / 5TB data transfer) in the `LON1` London region under `Ubuntu 18.04.3 (LTS) x64`. Billing was at the level of `$40 /mo` (`$0.060 /hour`). The server was created and populated the day before the workshop with an intention of making it available for the workshop day and the day after.
 
@@ -37,6 +37,16 @@ sudo tljh-config set auth.type firstuseauthenticator.FirstUseAuthenticator
 sudo tljh-config set auth.FirstUseAuthenticator.create_users True
 sudo tljh-config reload
 ```
+
+### Using An https
+
+I had previously added a domain to my Digital Ocean account as per guidance [here](https://www.digitalocean.com/docs/networking/dns/how-to/add-domains/). *This simply means adding the domain name (eg ouseful.org) to your account and then from your domain control panel, adding the Digital Ocean nameservers (ns1.digitalocean.com, ns2.digitalocean.com, ns3.digitalocean.com).*
+
+It’s then trivial to create and map a subdomain to a Digital Ocean droplet:
+
+![](https://ouseful.files.wordpress.com/2020/07/control_panel_-_digitalocean.png?w=768&h=444)
+
+I then enabled https using a free LetsEncrypt certificate following [this TLJH guidance](https://tljh.jupyter.org/en/latest/howto/admin/https.html#howto-admin-https).
 
 
 ### TLJH Customisation
