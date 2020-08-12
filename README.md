@@ -38,7 +38,7 @@ sudo tljh-config set auth.FirstUseAuthenticator.create_users True
 sudo tljh-config reload
 ```
 
-### Using An https
+### Specifyng a Domian Name and Enabling https
 
 I had previously added a domain to my Digital Ocean account as per guidance [here](https://www.digitalocean.com/docs/networking/dns/how-to/add-domains/). *This simply means adding the domain name (eg ouseful.org) to your account and then from your domain control panel, adding the Digital Ocean nameservers (ns1.digitalocean.com, ns2.digitalocean.com, ns3.digitalocean.com).*
 
