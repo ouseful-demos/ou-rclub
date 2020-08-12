@@ -11,3 +11,8 @@ jupyter trust tutorial/jupyter_r_notebook_demo.ipynb
 
 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/Jupyter_py_and_R.ipynb
 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/jupyter_r_notebook_demo.ipynb
+
+python - <<EOF
+nltk.download('gutenberg')
+nltk.download('punkt')
+EOF
