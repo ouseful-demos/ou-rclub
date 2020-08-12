@@ -13,6 +13,7 @@ jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/Jupy
 jupyter nbconvert --ClearOutputPreprocessor.enabled=True --inplace tutorial/jupyter_r_notebook_demo.ipynb
 
 python - <<EOF
+import nltk
 nltk.download('gutenberg')
 nltk.download('punkt')
 EOF
