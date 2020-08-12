@@ -102,3 +102,9 @@ To restart the server with the new settings:
 ```
 /opt/tljh/hub/bin/tljh-config reload
 ```
+
+
+# TO DO 
+
+The environment could perhaps be tightened up firther security wise. For example, by following this [Streetwise Guide To
+Jupyter Security](https://drive.google.com/file/d/1qkorV2xKkTeu4tk8ThOHeGc6jkmy5InT/view)
