@@ -79,7 +79,7 @@ and added to the `jupyterhub_config.py` file:
 c.JupyterHub.logo_file = '/usr/local/share/jupyter/hub/static/images/OU-logo-83x65.png'
 ```
 
-(The notebook server homepage / notebooks themselves were branded using `.jupyter` config settings in the repos the environments themselves were built from.)
+(The notebook server homepage / notebooks themselves were branded using `.jupyter/custom/` config settings in the repos the environments themselves were built from.)
 
 Tweaks to login page:
 
