@@ -38,6 +38,8 @@ sudo tljh-config set auth.FirstUseAuthenticator.create_users True
 sudo tljh-config reload
 ```
 
+NOTE: this first-use authenticator may not set things up correctly: see [this issue](https://github.com/plasmabio/tljh-repo2docker/issues/37). Better is to use the default authenticator and add local users/admin users ([docs](https://tljh.jupyter.org/en/latest/howto/admin/admin-users.html?highlight=add%20users)) from the JupyterHub Admin panel?
+
 ### Specifying a Domian Name and Enabling https
 
 I had previously added a domain to my Digital Ocean account as per guidance [here](https://www.digitalocean.com/docs/networking/dns/how-to/add-domains/). *This simply means adding the domain name (eg ouseful.org) to your account and then from your domain control panel, adding the Digital Ocean nameservers (ns1.digitalocean.com, ns2.digitalocean.com, ns3.digitalocean.com).*
