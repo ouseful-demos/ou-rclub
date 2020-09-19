@@ -107,6 +107,7 @@ To restart the server with the new settings:
 /opt/tljh/hub/bin/tljh-config reload
 ```
 
+The user notebook server (notebook homepage; individal notebooks) is custom branded with an institutional logo via tweaks to the CSS using the contents of the [`.jupyter/custom`](https://github.com/ouseful-demos/ou-rclub/tree/master/.jupyter/custom) directory.
 
 # TO DO 
 
