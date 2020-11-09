@@ -28,4 +28,4 @@ wget https://github.com/ouseful-demos/ou-rclub/raw/master/.jupyter/custom/OU-log
 
 sed -i 's/^#?\s+c.JupyterHub.logo_file.*/c.JupyterHub.logo_file = "\/usr\/local\/share\/jupyter\/hub\/static\/images\/OU-logo-83x65.png"/' /opt/tljh/hub/lib/python3.8/site-packages/tljh/jupyterhub_config.py
 
-sudo tljh-config reload
+/opt/tljh/hub/bin/tljh-config reload
