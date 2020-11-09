@@ -27,6 +27,8 @@ jupyter-repo2docker https://github.com/ouseful-demos/ou-rclub
 
 The multiuser JupyterHub server used for the tutorial was a TLJH ([The Littlest JupyterHub](https://tljh.jupyter.org/en/latest/)) server. The environment used was built from this repository and managed thereafter using the [`plasmabio/tljh-repo2docker`](https://github.com/plasmabio/tljh-repo2docker) extension.
 
+*Alternatively, just use a DockerSpawner, eg as per https://ideonate.com/DockerSpawner-in-TLJH/*
+
 The JupyterHub server was running on a [Digital Ocean](https://www.digitalocean.com/) basic server (8 GB Memory / 160 GB Disk / 5TB data transfer) in the `LON1` London region under `Ubuntu 18.04.3 (LTS) x64`. Billing was at the level of `$40 /mo` (`$0.060 /hour`). The server was created and populated the day before the workshop with an intention of making it available for the workshop day and the day after.
 
 Authentication on the TLJH server was switched to the first use authenticator by logging in to the physical server using ssh and issuing the commands:
