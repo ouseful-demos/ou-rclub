@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#wget https://raw.githubusercontent.com/ouseful-demos/ou-rclub/master/server.sh
+#chmod u+x server.sh 
+#./server.sh
+
 # install Docker
 sudo apt update && sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
